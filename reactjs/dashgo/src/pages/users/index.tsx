@@ -16,6 +16,7 @@ import {
   Spinner,
 } from '@chakra-ui/react';
 import Link from 'next/link';
+import { useState } from 'react';
 import { RiAddLine, RiPencilLine } from 'react-icons/ri';
 
 import { Header } from '../../components/Header';
@@ -24,7 +25,8 @@ import { Sidebar } from '../../components/Sidebar';
 import { useUsers } from '../../services/hooks/useUsers';
 
 export default function UserList() {
-  const { data, isLoading, isFetching, error } = useUsers();
+  const [page, setPage] = useState(1);
+  const { data, isLoading, isFetching, error } = useUsers(page);
 
   const isWideVersion = useBreakpointValue({ base: false, lg: true });
   const isMediumVersion = useBreakpointValue({ base: false, sm: true });
@@ -40,7 +42,9 @@ export default function UserList() {
           <Flex mb="8" justify="space-between" align="center">
             <Heading size="lg" fontWeight="normal">
               Usuários
-              {!isLoading && isFetching && <Spinner size="sm" color="gray.500" ml="4" />}
+              {!isLoading && isFetching && (
+                <Spinner size="sm" color="gray.500" ml="4" />
+              )}
             </Heading>
 
             <Link href="/users/create" passHref>
@@ -78,7 +82,7 @@ export default function UserList() {
                   </Tr>
                 </Thead>
                 <Tbody>
-                  {data.map((user) => (
+                  {data.users.map((user) => (
                     <Tr key={user.id}>
                       <Td px={['4', '4', '6']}>
                         <Checkbox colorScheme="pink" />
@@ -110,7 +114,11 @@ export default function UserList() {
                 </Tbody>
               </Table>
 
-              <Pagination />
+              <Pagination
+                totalCountOfRegisters={data.totalCount}
+                currentPage={page}
+                onPageChange={setPage}
+              />
             </>
           )}
         </Box>
