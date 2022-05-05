@@ -11,6 +11,7 @@ Repositório que armazena todos os projetos desenvolvidos durante as trilhas da 
 - [Capítulo 3 - ignews](ignews)
 - [Capítulo 4 - dashgo](dashgo)
 - [Capítulo 4 - nextauth](nextauth)
+  - Depende dessa repositório para completo funcionamento: [nextauth back-end](https://github.com/gomesanac/ignite-reactjs-nextauth-backend)
 
 ## Desafios
 
