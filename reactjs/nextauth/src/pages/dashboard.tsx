@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.css';
 import { withSSRAuth } from '../utils/withSSRAuth';
 
 const Dashboard: NextPage = () => {
-  const { user } = useContext(AuthContext);
+  const { user, signOut } = useContext(AuthContext);
 
   useEffect(() => {
     api
@@ -23,6 +23,9 @@ const Dashboard: NextPage = () => {
   return (
     <div className={styles.container}>
       <h1>Dashboard: {user?.email}</h1>
+
+      <button onClick={signOut}>Sign Out</button>
+
       <Can permissions={['metrics.list']}>
         <div>Métricas</div>
       </Can>
