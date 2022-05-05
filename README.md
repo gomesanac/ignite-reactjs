@@ -1,6 +1,6 @@
-# ignite-rocketseat
+# ignite-reactjs
 
-Repositório que armazena todos os projetos desenvolvidos durante as trilhas da Rocketseat.
+Repositório que armazena todos os projetos desenvolvidos durante a trilha de **ReactJS** da [**Rocketseat**](https://www.rocketseat.com.br/).
 
 ## Exercícios
 
