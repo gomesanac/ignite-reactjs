@@ -1,10 +1,8 @@
 # ignite-reactjs
 
-Repositório que armazena todos os projetos desenvolvidos durante a trilha de **ReactJS** da [**Rocketseat**](https://www.rocketseat.com.br/).
+Repositório que armazena todos os projetos desenvolvidos durante a Trilha de **React JS** da [**Rocketseat**](https://www.rocketseat.com.br/).
 
 ## Exercícios
-
-### Trilha ReactJS
 
 - [Capítulo 1 - GitHub Explorer](github-explorer)
 - [Capítulo 2 - DT Money](dt-money)
@@ -17,8 +15,6 @@ Repositório que armazena todos os projetos desenvolvidos durante a trilha de **
   - Implementação de testes unitários, apartir desse [commit](https://github.com/gomesanac/ignite-reactjs/commit/fc875ddd3659bbc41bc826db8b4ec6c4e5d92e88).
 
 ## Desafios
-
-### Trilha ReactJS
 
 - [Capítulo 1 - Conceitos do React](https://github.com/gomesanac/ignite-reactjs-conceitos-do-react)
 - [Capítulo 1 - Componentizando a apliacação](https://github.com/gomesanac/ignite-componentizando-a-aplicacao)
